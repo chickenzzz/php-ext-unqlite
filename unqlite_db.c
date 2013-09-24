@@ -98,7 +98,7 @@ UNQLITE_ZEND_METHOD(DB, __construct)
     php_set_error_handling(EH_THROW, NULL TSRMLS_CC);
 #endif
 
-    rc = zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "p|l",
+    rc = zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s|l", // change p to s to use under php 5.3.25
                                &filename, &filename_len, &mode);
 
 #if ZEND_MODULE_API_NO >= 20090626
